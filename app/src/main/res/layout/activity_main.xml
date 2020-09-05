@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"
+                android:textAlignment="center"
+                />
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="#DA031C"
+                android:textSize="20dp"
+
+            android:text="Click on line to view count."/>
+
+            <TextView
+                android:layout_marginTop="50dp"
+                android:id="@+id/textview_graph_TotalCases"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="Total Cases"
+                android:textSize="30dp"
+                android:background="#051C9F"
+                android:textColor="#F3F3F3"
+                android:textFontWeight="@android:integer/config_longAnimTime"
+                />
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/graph_TotalCases"
+                android:layout_marginTop="50dp"
+                android:layout_height="400dp"
+                android:layout_width="match_parent"
+                />
+
+            <TextView
+                android:layout_marginTop="50dp"
+                android:id="@+id/textview_graph_ActiveCases"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="Active Cases"
+                android:textSize="30dp"
+                android:background="#051C9F"
+                android:textColor="#F3F3F3"
+                android:textFontWeight="@android:integer/config_longAnimTime"
+                />
+
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/graph_ActiveCases"
+                android:layout_height="400dp"
+                android:layout_marginTop="0dp"
+                android:layout_width="match_parent"
+                />
+
+
+            <TextView
+                android:layout_marginTop="50dp"
+                android:id="@+id/textview_graph_NewCases"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="New Cases"
+                android:textSize="30dp"
+                android:background="#051C9F"
+                android:textColor="#F3F3F3"
+                android:textFontWeight="@android:integer/config_longAnimTime"
+                />
+
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/graph_NewCases"
+                android:layout_height="400dp"
+                android:layout_marginTop="0dp"
+                android:layout_width="match_parent"
+                />
+
+            <TextView
+                android:layout_marginTop="50dp"
+                android:id="@+id/textview_graph_TotalCasesDischargeDeath1"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="Total Cases"
+                android:textSize="10dp"
+                android:background="#051C9F"
+                android:textColor="#F3F3F3"
+                android:textFontWeight="@android:integer/config_longAnimTime"
+                />
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:id="@+id/textview_graph_TotalCasesDischargeDeath2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="Total Discharge"
+                android:textSize="10dp"
+                android:background="#126803"
+                android:textColor="#F3F3F3"
+                android:textFontWeight="@android:integer/config_longAnimTime"
+                />
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:id="@+id/textview_graph_TotalCasesDischargeDeath3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="Total Death"
+                android:textSize="10dp"
+                android:background="#9F0505"
+                android:textColor="#F3F3F3"
+                android:textFontWeight="@android:integer/config_longAnimTime"
+                />
+
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/graph_TotalCasesDischargeDeath"
+                android:layout_height="400dp"
+                android:layout_marginTop="0dp"
+                android:layout_width="match_parent"
+                />
+
+            <TextView
+                android:layout_marginTop="50dp"
+                android:id="@+id/textview_graph_NewCasesDischargeDeath1"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="Daily Cases"
+                android:textSize="10dp"
+                android:background="#051C9F"
+                android:textColor="#F3F3F3"
+                android:textFontWeight="@android:integer/config_longAnimTime"
+                />
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:id="@+id/textview_graph_NewCasesDischargeDeath2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="Daily Discharge"
+                android:textSize="10dp"
+                android:background="#126803"
+                android:textColor="#F3F3F3"
+                android:textFontWeight="@android:integer/config_longAnimTime"
+                />
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:id="@+id/textview_graph_NewCasesDischargeDeath3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="Daily Death"
+                android:textSize="10dp"
+                android:background="#9F0505"
+                android:textColor="#F3F3F3"
+                android:textFontWeight="@android:integer/config_longAnimTime"
+                />
+
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/graph_NewCasesDischargeDeath"
+                android:layout_height="400dp"
+                android:layout_marginTop="0dp"
+                android:layout_width="match_parent"
+                />
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-7617656983148334/4633014113">
+        </com.google.android.gms.ads.AdView>
+
+        </LinearLayout>
+
+    </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
